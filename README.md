@@ -1,4 +1,6 @@
-#Socket programing in c language for local network.
-##What is Socket Programming?/n
-So Socket Programming is the method in which we use programming language ,port to connect two System or more system. 
+# Creating chat room using C (Socket Programming).
+## What does this chatroom do.
+So basiclly this chatroom in this there will be two main component a *Server* and *Client*.
+Server is 
+ 
 
