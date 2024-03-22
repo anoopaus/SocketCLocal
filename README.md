@@ -96,7 +96,8 @@ Also, we can see that we have a *fprintf*. It is used to write formatted data to
      socklen_t clilen;
      sockfd = socket(AF_INET, SOCK_STREAM,0);
 ````
-Now,In the next part we are decleaying the data types of the variables. As we have *buffer[255]* is a char,and *stuct sockaddr_in*  => serv_addr,cli_addr.
+Now,In the next part we are decleaying the data types of the variables. As we have *buffer[255]* is a char,and *stuct sockaddr_in*  => serv_addr,cli_addr.This just explanation of the stucture. 
+#### (You no need to code it.)
 ```c
 struct sockaddr_in {
     short            sin_family;   // Address family (e.g., AF_INET)
