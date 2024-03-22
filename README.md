@@ -57,16 +57,25 @@ This header file is responsible for the essential component of socket programmin
 #include<sys/socket.h>
 ````
 
-Now, This header file is really important for networking programming in C, particularly for working with IP or we can say internet addresses and sockets. Mainly it works in the field of networks it has a function named 'sockaddr_in' which structure for handling IP addresses and port numbers.
+Now, This header file is essential for networking programming in C, particularly for working with IP or we can say internet addresses and sockets. Mainly it works in the field of networks it has a function named 'sockaddr_in' which structure for handling IP addresses and port numbers.
 ```c
 #include<netinet/in.h>
 ````
 
-We have a basic header file named string it is used for using the funcinalty about the string link entering a string, finding the length of a string, etc.
+We have a basic header file named string it is used for using the functionality about the string link entering a string, finding the length of a string, etc.
 ```c
 #include<string.h>
 ````
 
+### Let's create the ERROR function.
+```c
+void error(const char *msg)
+     {
+        perror(msg);
+        exit(1);
+     }
+````
+This is the first line after importing the libraries. So we know that at the time of creating a function, we have to give the type of the function so, here it is void and in its argument, we have the massage pointer as char variable type. Now in  
 
 
 
