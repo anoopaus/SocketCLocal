@@ -57,7 +57,17 @@ This header file is responsible for the essential component of socket programmin
 #include<sys/socket.h>
 ````
 
-Now, This header file is really important for networking programming in C, particularly for working with IP or we can say internet addresses and sockets. Mainly it works in the field of networks like it has a function named 'sockaddr_in' which structure for handling IP addresses and port numbers.
+Now, This header file is really important for networking programming in C, particularly for working with IP or we can say internet addresses and sockets. Mainly it works in the field of networks it has a function named 'sockaddr_in' which structure for handling IP addresses and port numbers.
+```c
+#include<netinet/in.h>
+````
+
+We have a basic header file named string it is used for using the funcinalty about the string link entering a string, finding the length of a string, etc.
+```c
+#include<string.h>
+````
+
+
 
 
 
