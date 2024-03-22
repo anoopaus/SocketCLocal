@@ -90,7 +90,7 @@ int main(int argc,char *argv[])
 So, After writing the error function we are on the main function. *int main(int argc,char *argc[])** in this line we can see *argc* it stands for argument count. It represents the number of command-line arguments passed to the program when it is executed.
 Also, we can see that we have a *fprintf*. It is used to write formatted data to a file. Its part of the standard I/O library. 
 ```c
-int sockfd,newsockfd,portno,n;
+     int sockfd,newsockfd,portno,n;
      char buffer[255];
      struct sockaddr_in serv_addr,cli_addr;
      socklen_t clilen;
