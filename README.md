@@ -87,8 +87,24 @@ int main(int argc,char *argv[])
         exit(1);     
      }
 ```
-
-
+So, After writing the error function we are on the main function. *int main(int argc,char *argc[])** in this line we can see *argc* it stands for argument count. It represents the number of command-line arguments passed to the program when it is executed.
+Also, we can see that we have a *fprintf*. It is used to write formatted data to a file. Its part of the standard I/O library. 
+```c
+int sockfd,newsockfd,portno,n;
+     char buffer[255];
+     struct sockaddr_in serv_addr,cli_addr;
+     socklen_t clilen;
+     sockfd = socket(AF_INET, SOCK_STREAM,0);
+````
+Now,In the next part we are decleaying the data types of the variables. As we have *buffer[255]* is a char,and *stuct sockaddr_in*  => serv_addr,cli_addr.
+```c
+struct sockaddr_in {
+    short            sin_family;   // Address family (e.g., AF_INET)
+    unsigned short   sin_port;     // Port number (in network byte order)
+    struct in_addr   sin_addr;     // IP address
+    char             sin_zero[8];  // Padding to make the structure the same size as struct sockaddr
+};
+````
 
 
 
