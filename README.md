@@ -75,7 +75,20 @@ void error(const char *msg)
         exit(1);
      }
 ````
-This is the first line after importing the libraries. So we know that at the time of creating a function, we have to give the type of the function so, here it is void and in its argument, we have the massage pointer as char variable type. Now in  
+This is the first line after importing the libraries. So we know that at the time of creating a function, we have to give the type of the function so, here it is void and in its argument, we have the massage pointer as char variable type. Now in the function, we have a line *perror()*  another function that is used to print the error message to the standard error stream. The 'msg' This is a string that is typically used to provide additional context to the error message. When we see the function we can observe that it is working on recursive Methode.
+
+### Now Let's go for the main function.
+```c
+int main(int argc,char *argv[])
+{
+    if(argc<2)
+     {
+        fprintf(stderr,"Prot no. not prvided. Program terminated\n");
+        exit(1);     
+     }
+```
+
+
 
 
 
