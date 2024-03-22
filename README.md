@@ -12,6 +12,7 @@ As this code is for Linux and iOS-based operating systems so, to create the abov
 --->Intermediate knowledge of c language.<br>
 The above things will be more than enough<br>
 ## Let's Start with the project.
+### (For the Server side!)
 Now you have to create a C file name "Server. c". With the help of the terminal.<br>
 To create the file type:
 ```terminal
@@ -56,7 +57,7 @@ This header file is responsible for the essential component of socket programmin
 #include<sys/socket.h>
 ````
 
-Now, This header file is really important for networking programming in C, particularly for working with IP or we can say internet addresses and sockets. 
+Now, This header file is really important for networking programming in C, particularly for working with IP or we can say internet addresses and sockets. Mainly it works in the field of networks like it has a function named 'sockaddr_in' which structure for handling IP addresses and port numbers.
 
 
 
