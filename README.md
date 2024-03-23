@@ -75,7 +75,7 @@ void error(const char *msg)
         exit(1);
      }
 ````
-This is the first line after importing the libraries. So we know that at the time of creating a function, we have to give the type of the function so, here it is void and in its argument, we have the massage pointer as char variable type. Now in the function, we have a line *perror()*  another function that is used to print the error message to the standard error stream. The 'msg' This is a string that is typically used to provide additional context to the error message. When we see the function we can observe that it is working on recursive Methode.
+This is the first line after importing the libraries. So we know that at the time of creating a function, we have to give the type of the function so, here it is void and in its argument, we have the massage pointer as char variable type. Now in the function, we have a line ```perror()```  another function that is used to print the error message to the standard error stream. The 'msg' This is a string that is typically used to provide additional context to the error message. When we see the function we can observe that it is working on recursive Methode.
 
 ### Now Let's go for the main function.
 ```c
@@ -87,8 +87,8 @@ int main(int argc,char *argv[])
         exit(1);     
      }
 ```
-So, After writing the error function we are on the main function. *int main(int argc,char *argc[])** in this line we can see *argc* it stands for argument count. It represents the number of command-line arguments passed to the program when it is executed.
-Also, we can see that we have a *fprintf*. It is used to write formatted data to a file. Its part of the standard I/O library. 
+So, After writing the error function we are on the main function. ```int main(int argc,char *argc[])``` in this line we can see *argc* it stands for argument count. It represents the number of command-line arguments passed to the program when it is executed.
+Also, we can see that we have a ```fprintf```. It is used to write formatted data to a file. It's part of the standard I/O library. 
 ```c
      int sockfd,newsockfd,portno,n;
      char buffer[255];
@@ -96,7 +96,7 @@ Also, we can see that we have a *fprintf*. It is used to write formatted data to
      socklen_t clilen;
      sockfd = socket(AF_INET, SOCK_STREAM,0);
 ````
-Now,In the next part we are decleaying the data types of the variables. As we have *buffer[255]* is a char,and *stuct sockaddr_in*  => serv_addr,cli_addr.This just explanation of the stucture. 
+Now, In the next part, we are declaring the data types of the variables. As we have ```buffer[255]``` is a char,and ```stuct sockaddr_in  => serv_addr,cli_addr.```This is just an explanation of the structure. 
 #### (You no need to code it.)
 ```c
 struct sockaddr_in {
@@ -106,6 +106,25 @@ struct sockaddr_in {
     char             sin_zero[8];  // Padding to make the structure the same size as struct sockaddr
 };
 ````
+And, In the next line, we have ``` socklen_t clilen;``` which represents the length of the socket address structure. When we are dealing with functions like *accept()* or *recvfrom()*, which involve receiving data from the client, you need to specify the size of the client's address structure.
+Again, We have another function ```sockfd = socket(AF_INET, SOCK_STREAM,0);```. In the line we can see that *sockfd* is a variable used to create the socket using socket function. This line of code is used to create the socket.
+### Next part of code after declaring the variables and calling functions. We have
+```c
+if(sockfd<0)
+     {
+        error("Error opening Socket.");
+     }
+````
+We have an if else condition which says if we don't have any connection it will show the Error opening Socket.
+### Now, after giving the condiction.
+```c
+ bzero((char *) &serv_addr,sizeof(serv_addr));
+     portno = atoi(argv[1]);
+     serv_addr.sin_family=AF_INET;
+     serv_addr.sin_addr.s_addr = INADDR_ANY;
+     serv_addr.sin_port = htons(portno);
+````
+
 
 
 
