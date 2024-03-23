@@ -107,7 +107,7 @@ struct sockaddr_in {
 };
 ````
 And, In the next line, we have ``` socklen_t clilen;``` which represents the length of the socket address structure. When we are dealing with functions like *accept()* or *recvfrom()*, which involve receiving data from the client, you need to specify the size of the client's address structure.
-Again, We have another function ```sockfd = socket(AF_INET, SOCK_STREAM,0);```. In the line we can see that *sockfd* is a variable used to create the socket using socket function. This line of code is used to create the socket.
+Again, We have another function ```sockfd = socket(AF_INET, SOCK_STREAM,0);```. In the line we can see that *sockfd* is a variable used to create the socket using the socket function. This line of code is used to create the socket.
 ### Next part of code after declaring the variables and calling functions. We have
 ```c
 if(sockfd<0)
@@ -115,15 +115,16 @@ if(sockfd<0)
         error("Error opening Socket.");
      }
 ````
-We have an if else condition which says if we don't have any connection it will show the Error opening Socket.
-### Now, after giving the condiction.
+We have an if-else condition which says if we don't have any connection it will show the Error opening Socket.
+### Now, after giving the condition.
 ```c
- bzero((char *) &serv_addr,sizeof(serv_addr));
+     bzero((char *) &serv_addr,sizeof(serv_addr));
      portno = atoi(argv[1]);
      serv_addr.sin_family=AF_INET;
      serv_addr.sin_addr.s_addr = INADDR_ANY;
      serv_addr.sin_port = htons(portno);
 ````
+
 
 
 
