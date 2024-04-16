@@ -124,7 +124,22 @@ We have an if-else condition which says if we don't have any connection it will 
      serv_addr.sin_addr.s_addr = INADDR_ANY;
      serv_addr.sin_port = htons(portno);
 ````
-Now we have bzero function which is used to zero out a block of memory. It's typically used to initialize structures or buffers before use, particularly in networking applications where you're dealing with data transmission and reception.The ```bzero()``` function takes two arguments: a pointer to the memory block and the size of the block. It sets all the bytes in the block of memory to zero.
+As, We can see in the above code a ```bzero()``` function is used it is used for the initialized memory, particularly for data structs or buffers that will be used in networking operations. Now, bzero() is used in socket programming.<br>1. Memory initialization.<br>
+2. Security.<br>
+3. Compatibility.<br>
+Now the function explanation is:
+```c
+   #include <stddef.h>
+    void bzero(void *s, size_t n)
+   {
+    char *p = (char *)s;
+    while (n-- > 0)
+   {
+        *p++ = 0;
+   }
+   }
+```
+
 
 
 
